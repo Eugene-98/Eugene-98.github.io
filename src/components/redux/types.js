@@ -1,0 +1,2 @@
+export const FETCH_WAETHER = 'FETCH_POSTS'
+export const REQUEST_WAETHER = 'REQUEST_POSTS'
