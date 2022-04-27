@@ -9,14 +9,14 @@ export default () => {
 
     return (
     <>
-    <div className='row'>
-        <div className='col col-lg-2'>
+    <div className='row justify-content-between'>
+        <div className='col-4'>
             <button className="btn btn-outline-primary" onClick={() => dispatch(fetchWeather())}>
                 Show
             </button>
         </div>
-        <div className='col col-md-2'>
-            <button className="btn btn-outline-danger" onClick={() => dispatch(resetWeather())}>
+        <div className='col-1 '>
+            <button className="btn btn-outline-danger me-md-2" onClick={() => dispatch(resetWeather())}>
                 Reset
             </button>
         </div>
