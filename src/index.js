@@ -1,15 +1,14 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
 import { Provider, connect } from 'react-redux';
-import reportWebVitals from './reportWebVitals';
 import createSagaMiddleware from 'redux-saga';
 import {createStore, applyMiddleware} from 'redux';
 import App from './App';
-import { rootReducer } from './components/redux/rootReducer';
+import { rootReducer } from './components/redux/reducers/rootReducer';
 import watchFetchWeather from './components/redux/sagas'
 
 const container = document.getElementById('root');
-const root = createRoot(container);
+const root = ReactDOM.createRoot(container);
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -31,5 +30,3 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
-
-reportWebVitals();
